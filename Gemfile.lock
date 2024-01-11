@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: cff2eb1be11cb729382b3674e3caa2bd198ec55e
+  revision: d429bfb3b6fd2794f0d859b68e5dee24578d405f
+  ref: d429bfb3b6fd2794f0d859b68e5dee24578d405f
   branch: main
   specs:
     actioncable (7.2.0.alpha)
@@ -15,13 +16,19 @@ GIT
       activerecord (= 7.2.0.alpha)
       activestorage (= 7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
-      mail (>= 2.8.0)
+      mail (>= 2.7.1)
+      net-imap
+      net-pop
+      net-smtp
     actionmailer (7.2.0.alpha)
       actionpack (= 7.2.0.alpha)
       actionview (= 7.2.0.alpha)
       activejob (= 7.2.0.alpha)
       activesupport (= 7.2.0.alpha)
-      mail (>= 2.8.0)
+      mail (~> 2.5, >= 2.5.4)
+      net-imap
+      net-pop
+      net-smtp
       rails-dom-testing (~> 2.2)
     actionpack (7.2.0.alpha)
       actionview (= 7.2.0.alpha)
@@ -124,6 +131,11 @@ GEM
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    delayed_job (4.1.11)
+      activesupport (>= 3.0, < 8.0)
+    delayed_job_active_record (4.1.8)
+      activerecord (>= 3.0, < 8.0)
+      delayed_job (>= 3.0, < 5)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
@@ -301,6 +313,8 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  delayed_job
+  delayed_job_active_record
   importmap-rails
   jbuilder
   puma (>= 5.0)

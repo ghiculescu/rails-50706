@@ -2,8 +2,22 @@ source "https://rubygems.org"
 
 ruby "3.2.2"
 
-# Use main development branch of Rails
-gem "rails", github: "rails/rails", branch: "main"
+
+
+
+
+
+# https://github.com/rails/rails/commit/d429bfb3b6fd2794f0d859b68e5dee24578d405f is where the bug is reported.
+gem "rails", github: "rails/rails", branch: "main", ref: "d429bfb3b6fd2794f0d859b68e5dee24578d405f"
+
+# https://github.com/rails/rails/commit/21090a1319064fb3a3639d9b3ca84858c15da756 is the last ref on main before the bug.
+# gem "rails", github: "rails/rails", branch: "main", ref: "21090a1319064fb3a3639d9b3ca84858c15da756"
+
+
+
+
+
+
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -43,6 +57,9 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+gem "delayed_job"
+gem "delayed_job_active_record"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
