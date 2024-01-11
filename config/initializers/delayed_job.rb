@@ -1,4 +1,4 @@
-# this is a bit convoluted, it's needed to make DJ talk to a different database - see https://github.com/TandaHQ/payaus/pull/14038
+# this is a bit convoluted, it's needed to make DJ talk to a different database
 #
 # Delayed::Backend::ActiveRecord::Job is the class from https://github.com/collectiveidea/delayed_job_active_record/blob/master/lib/delayed/backend/active_record.rb
 # DelayedJobAbstractParentClass is needed as `connects_to` can only be called on abstract classes
